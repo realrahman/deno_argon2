@@ -17,5 +17,5 @@ assertEquals(1, result);
 
 run app with appropriate flags.
 ```sh
-deno run --allow-read -allow-env --allow-ffi --unstable  app.ts
+deno run --allow-read --allow-env --allow-ffi --unstable  app.ts
 ```
