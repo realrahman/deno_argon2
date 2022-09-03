@@ -2,7 +2,7 @@
 
 use [argon2](https://docs.rs/argon2/latest/argon2/) crate(rust) in deno-runtime.  
 
-###Example usage
+### Example usage
 
 create a typescript file app.ts.
 ```ts
