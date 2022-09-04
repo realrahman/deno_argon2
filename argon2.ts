@@ -23,7 +23,7 @@ export function hash(password: string, parameters?: Params, algorithm: Algorithm
  * @returns -returns 1 if password matches hash else return 0
  */
 export async function verify(password: string, passwordHash: string): Promise<boolean> {
-    const result= verifyffi(password, passwordHash);
+    const result= await verifyffi(password, passwordHash);
     
     switch(result){
         case 1:
