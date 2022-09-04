@@ -22,6 +22,15 @@ export function hash(password: string, parameters?: Params, algorithm: Algorithm
  * @param passwordHash -password-hash of format $argon2{X}$v={V}$m={M},t={T},p={P}${salt}${digest}
  * @returns -returns 1 if password matches hash else return 0
  */
-export function verify(password: string, passwordHash: string): Promise<number> {
-    return verifyffi(password, passwordHash);
+export async function verify(password: string, passwordHash: string): Promise<boolean> {
+    const result= verifyffi(password, passwordHash);
+    
+    switch(result){
+        case 1:
+            return true;
+        case 0:
+            return false;
+        default:
+            throw new TypeError('unexpected integer value,result should be either 1 or 0');
+    }
 }
