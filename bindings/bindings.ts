@@ -47,17 +47,17 @@ const opts = {
 }
 const _lib = await prepare(opts, {
   hash: {
-    parameters: ["pointer", "usize", "pointer", "usize", "pointer", "usize"],
-    result: "pointer",
+    parameters: ["buffer", "usize", "buffer", "usize", "buffer", "usize"],
+    result: "buffer",
     nonblocking: true,
   },
   hash_default: {
-    parameters: ["pointer", "usize"],
-    result: "pointer",
+    parameters: ["buffer", "usize"],
+    result: "buffer",
     nonblocking: true,
   },
   verify: {
-    parameters: ["pointer", "usize", "pointer", "usize"],
+    parameters: ["buffer", "usize", "buffer", "usize"],
     result: "u8",
     nonblocking: true,
   },
