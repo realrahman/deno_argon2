@@ -20,7 +20,7 @@ export function hash(password: string, parameters?: Params, algorithm: Algorithm
  * 
  * @param password -password in plaintext
  * @param passwordHash -password-hash of format $argon2{X}$v={V}$m={M},t={T},p={P}${salt}${digest}
- * @returns -returns 1 if password matches hash else return 0
+ * @returns -returns true if password matches
  */
 export async function verify(password: string, passwordHash: string): Promise<boolean> {
     const result= await verifyffi(password, passwordHash);
